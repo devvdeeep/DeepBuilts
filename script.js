@@ -67,7 +67,6 @@
 
     var sequence = Promise.resolve();
 
-    // brief beat on the blank page, then every sketch appears together
     sequence = sequence.then(function () { return delay(200); });
     sequence = sequence.then(function () { return drawAllIcons(); });
 
@@ -121,7 +120,7 @@
   }
 
   // =====================================================
-  // ABOUT SECTION — scroll-triggered reveals + card sketches
+  // SCROLL-TRIGGERED REVEALS — about, cards, all sections
   // =====================================================
 
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal-up"));
@@ -148,8 +147,6 @@
     });
   }
 
-  // Once the entrance animation finishes, drop it so :hover transitions
-  // on transform are free to run without any leftover animation delay.
   function releaseCardAnimation(card) {
     card.addEventListener("animationend", function handler() {
       card.style.animation = "none";
@@ -203,6 +200,66 @@
     cards.forEach(function (card) { cardObserver.observe(card); });
   }
 
+  // =====================================================
+  // BACK TO TOP BUTTON
+  // =====================================================
+
+  function initBackToTop() {
+    var btn = document.getElementById("back-to-top");
+    if (!btn) return;
+
+    var shown = false;
+    var threshold = 600;
+
+    function onScroll() {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollY > threshold && !shown) {
+        shown = true;
+        btn.classList.add("visible");
+      } else if (scrollY <= threshold && shown) {
+        shown = false;
+        btn.classList.remove("visible");
+      }
+    }
+
+    // Throttle with rAF
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          onScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
+
+  // =====================================================
+  // HIDE SCROLL INDICATOR ON SCROLL
+  // =====================================================
+
+  function initScrollHide() {
+    if (!scrollIndicator) return;
+    var hidden = false;
+
+    window.addEventListener("scroll", function () {
+      if (!hidden && (window.pageYOffset || document.documentElement.scrollTop) > 100) {
+        hidden = true;
+        scrollIndicator.style.opacity = "0";
+        scrollIndicator.style.transition = "opacity 0.5s ease";
+      }
+    }, { passive: true });
+  }
+
+  // =====================================================
+  // BOOT
+  // =====================================================
+
   document.addEventListener("DOMContentLoaded", function () {
     if (reduceMotion) {
       skipToFinalState();
@@ -211,5 +268,7 @@
     }
     initParallax();
     initScrollReveals();
+    initBackToTop();
+    initScrollHide();
   });
 })();
