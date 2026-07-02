@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Saffron Spoon — Every Meal Tells A Story. A luxury dining experience with signature dishes crafted by world-class chefs." />
+<meta name="theme-color" content="#1a1210" />
+<title>Saffron Spoon — Every Meal Tells A Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-logo">S</div>
+    <div class="loader-text">Saffron Spoon</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============ STICKY NAV ============ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo" aria-label="Saffron Spoon home">
+      <span class="nav-logo-icon">S</span>
+      <span class="nav-logo-text">Saffron Spoon</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+      <li role="none"><a href="#about" role="menuitem">About</a></li>
+      <li role="none"><a href="#dishes" role="menuitem">Dishes</a></li>
+      <li role="none"><a href="#menu" role="menuitem">Menu</a></li>
+      <li role="none"><a href="#gallery" role="menuitem">Gallery</a></li>
+      <li role="none"><a href="#testimonials" role="menuitem">Reviews</a></li>
+      <li role="none"><a href="#reservation" class="nav-cta" role="menuitem">Reserve Table</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-shape hero-shape-3"></div>
+    <div class="hero-shape hero-shape-4"></div>
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80" alt="Luxury dining experience" class="hero-img" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content reveal">
+    <p class="hero-label">✦ Est. 2018 — Fine Dining ✦</p>
+    <h1 class="hero-title">Saffron<br /><span>Spoon</span></h1>
+    <p class="hero-tagline">"Every Meal Tells A Story"</p>
+    <div class="hero-btns">
+      <a href="#reservation" class="btn btn-primary">Book a Table</a>
+      <a href="#menu" class="btn btn-outline">View Menu</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images reveal">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant interior" loading="lazy" />
+        </div>
+        <div class="about-img-accent">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80" alt="Head chef at work" loading="lazy" />
+          <div class="about-exp-badge">
+            <span class="about-exp-num counter" data-target="15">0</span>
+            <span class="about-exp-label">Years of<br />Excellence</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">A Legacy of Flavour<br />& Passion</h2>
+        <p>Born from a simple dream — to serve food that touches the soul — Saffron Spoon has evolved into a culinary landmark. Every dish is a love letter written in spice, flame, and tradition, crafted with ingredients sourced from local farms and global spice markets.</p>
+        <p>Our founder, Chef Arjun Malhotra, spent a decade training across kitchens in Paris, Tokyo, and Istanbul before returning home to create a space where Indian heritage meets contemporary finesse.</p>
+        <div class="about-chef">
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=200&q=80" alt="Chef Arjun Malhotra" loading="lazy" class="about-chef-img" />
+          <div>
+            <strong>Chef Arjun Malhotra</strong>
+            <span>Founder & Executive Chef</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE DISHES ============ -->
+<section id="dishes" class="section dishes">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Chef's Selection</span>
+      <h2 class="section-title">Signature Dishes</h2>
+      <p class="section-sub">Curated masterpieces that define our kitchen's soul</p>
+    </div>
+    <div class="dishes-grid">
+
+      <div class="dish-card reveal">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80" alt="Saffron Lamb Shank" loading="lazy" />
+          <div class="dish-badge">Chef's Pick</div>
+        </div>
+        <div class="dish-info">
+          <h3>Saffron Lamb Shank</h3>
+          <p>Slow-braised lamb shank infused with Kashmiri saffron, served on a bed of truffle risotto.</p>
+          <div class="dish-price">₹1,850</div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80" alt="Miso Glazed Sea Bass" loading="lazy" />
+          <div class="dish-badge">Bestseller</div>
+        </div>
+        <div class="dish-info">
+          <h3>Miso Glazed Sea Bass</h3>
+          <p>Chilean sea bass with white miso glaze, edamame purée, and pickled ginger beurre blanc.</p>
+          <div class="dish-price">₹2,200</div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Rose Panna Cotta" loading="lazy" />
+          <div class="dish-badge">Signature</div>
+        </div>
+        <div class="dish-info">
+          <h3>Rose Panna Cotta</h3>
+          <p>Silky vanilla panna cotta layered with rose-cardamom compote and pistachio crumble.</p>
+          <div class="dish-price">₹750</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTERS ============ -->
+<section class="section counters-section">
+  <div class="container">
+    <div class="counters-grid reveal">
+      <div class="counter-item">
+        <span class="counter-num counter" data-target="12000">0</span><span class="counter-suffix">+</span>
+        <span class="counter-label">Happy Guests</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num counter" data-target="85">0</span><span class="counter-suffix">+</span>
+        <span class="counter-label">Menu Items</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num counter" data-target="15">0</span>
+        <span class="counter-label">Years of Excellence</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num counter" data-target="30">0</span><span class="counter-suffix">+</span>
+        <span class="counter-label">Awards Won</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FULL MENU ============ -->
+<section id="menu" class="section menu-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Explore</span>
+      <h2 class="section-title">Our Menu</h2>
+      <p class="section-sub">A symphony of flavours across every course</p>
+    </div>
+
+    <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" role="tab" aria-selected="true" data-tab="starters">Starters</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-tab="mains">Main Course</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-tab="desserts">Desserts</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-tab="drinks">Drinks</button>
+    </div>
+
+    <div class="menu-panels">
+
+      <!-- STARTERS -->
+      <div class="menu-panel active" data-panel="starters" role="tabpanel">
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><h4>Truffle Mushroom Soup</h4><p>Wild mushroom velouté, truffle oil, sourdough croutons</p></div><span class="menu-item-price">₹550</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Prawn Tempura</h4><p>Tiger prawns in light batter, sriracha aioli, micro herbs</p></div><span class="menu-item-price">₹750</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Burrata Salad</h4><p>Fresh burrata, heirloom tomatoes, basil oil, aged balsamic</p></div><span class="menu-item-price">₹650</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Chicken Tikka Skewers</h4><p>Chargrilled tandoori chicken, mint chutney, onion rings</p></div><span class="menu-item-price">₹580</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Avocado Tartare</h4><p>Smashed avocado, mango salsa, wonton crisps</p></div><span class="menu-item-price">₹500</span></div>
+        </div>
+      </div>
+
+      <!-- MAINS -->
+      <div class="menu-panel" data-panel="mains" role="tabpanel">
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><h4>Saffron Lamb Shank</h4><p>Slow-braised, truffle risotto, saffron jus</p></div><span class="menu-item-price">₹1,850</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Miso Glazed Sea Bass</h4><p>Chilean sea bass, edamame purée, pickled ginger</p></div><span class="menu-item-price">₹2,200</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Butter Chicken Royale</h4><p>Slow-cooked in tomato-cashew gravy, gold leaf naan</p></div><span class="menu-item-price">₹950</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Grilled Ribeye Steak</h4><p>250g prime cut, peppercorn sauce, roasted vegetables</p></div><span class="menu-item-price">₹2,500</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Wild Mushroom Risotto</h4><p>Arborio rice, porcini, parmesan, truffle shavings</p></div><span class="menu-item-price">₹1,100</span></div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-panel" data-panel="desserts" role="tabpanel">
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><h4>Rose Panna Cotta</h4><p>Vanilla cream, rose-cardamom compote, pistachio</p></div><span class="menu-item-price">₹750</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Dark Chocolate Fondant</h4><p>Molten centre, salted caramel, vanilla bean ice cream</p></div><span class="menu-item-price">₹800</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Gulab Jamun Cheesecake</h4><p>Fusion dessert with saffron drizzle, crushed pistachios</p></div><span class="menu-item-price">₹650</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Mango Kulfi Trio</h4><p>Three artisan kulfi flavours with toasted almond crunch</p></div><span class="menu-item-price">₹550</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Tiramisu</h4><p>Classic Italian, espresso-soaked ladyfingers, mascarpone</p></div><span class="menu-item-price">₹700</span></div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-panel" data-panel="drinks" role="tabpanel">
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><h4>Saffron Gin Fizz</h4><p>Bombay Sapphire, saffron syrup, elderflower, lime</p></div><span class="menu-item-price">₹750</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Smoked Old Fashioned</h4><p>Bourbon, demerara, Angostura, applewood smoke</p></div><span class="menu-item-price">₹900</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Rose Lassi</h4><p>Thick yogurt, rose water, crushed pistachios, saffron</p></div><span class="menu-item-price">₹350</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Masala Chai Latte</h4><p>Single-origin Assam tea, cardamom, cinnamon, steamed milk</p></div><span class="menu-item-price">₹300</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h4>Fresh Watermelon Cooler</h4><p>Pressed watermelon, lime, mint, sparkling water</p></div><span class="menu-item-price">₹280</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Visual Feast</span>
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">A glimpse into the Saffron Spoon experience</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item gallery-tall" data-index="0"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant ambience" loading="lazy" /><div class="gallery-overlay"><span>Ambience</span></div></div>
+      <div class="gallery-item" data-index="1"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Plated dish" loading="lazy" /><div class="gallery-overlay"><span>Cuisine</span></div></div>
+      <div class="gallery-item" data-index="2"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Bar area" loading="lazy" /><div class="gallery-overlay"><span>Bar</span></div></div>
+      <div class="gallery-item gallery-tall" data-index="3"><img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&q=80" alt="Dessert presentation" loading="lazy" /><div class="gallery-overlay"><span>Desserts</span></div></div>
+      <div class="gallery-item" data-index="4"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Fine dining plate" loading="lazy" /><div class="gallery-overlay"><span>Fine Dining</span></div></div>
+      <div class="gallery-item" data-index="5"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Private dining room" loading="lazy" /><div class="gallery-overlay"><span>Private Dining</span></div></div>
+      <div class="gallery-item gallery-wide" data-index="6"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1000&q=80" alt="Chef preparing dish" loading="lazy" /><div class="gallery-overlay"><span>Kitchen</span></div></div>
+      <div class="gallery-item" data-index="7"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80" alt="Cocktail drinks" loading="lazy" /><div class="gallery-overlay"><span>Cocktails</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+  <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+  <button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+  <button class="lightbox-next" aria-label="Next image">&#8250;</button>
+  <img class="lightbox-img" src="" alt="" />
+  <div class="lightbox-caption"></div>
+</div>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why" class="section why-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Our Promise</span>
+      <h2 class="section-title">Why Choose Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🌿</div>
+        <h3>Fresh Ingredients</h3>
+        <p>Farm-to-table produce sourced daily from local organic farms and premium international suppliers.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">👨‍🍳</div>
+        <h3>Experienced Chefs</h3>
+        <p>A team of award-winning chefs with decades of global culinary expertise across Michelin-starred kitchens.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">✨</div>
+        <h3>Premium Ambience</h3>
+        <p>Thoughtfully designed interiors that blend warmth with sophistication — perfect for every occasion.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">⚡</div>
+        <h3>Fast Service</h3>
+        <p>Impeccable timing without compromise. Your meal arrives perfectly paced, every single time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Guest Love</span>
+      <h2 class="section-title">What People Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"An absolutely unforgettable dining experience. The Saffron Lamb Shank alone is worth the visit. The ambience is pure magic."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">P</div>
+          <div><strong>Priya Sharma</strong><span>Food Critic, Mumbai</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"We celebrated our anniversary here and it was perfection. Every dish was a masterpiece. The staff made us feel like royalty."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div><strong>Rahul & Meera Kapoor</strong><span>Regular Guests</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Best fine-dining experience in the city. The Miso Sea Bass is divine, and their cocktails are otherworldly. A must-visit!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div><strong>Ankit Verma</strong><span>Lifestyle Blogger</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVATION ============ -->
+<section id="reservation" class="section reservation-section">
+  <div class="container">
+    <div class="reservation-wrap">
+      <div class="reservation-text reveal">
+        <span class="section-label">Reserve</span>
+        <h2 class="section-title">Book Your Table</h2>
+        <p>Secure your spot for an unforgettable culinary journey. For parties larger than 10, please call us directly.</p>
+        <div class="reservation-contact">
+          <div><strong>📞</strong> +91 98765 43210</div>
+          <div><strong>📧</strong> reservations@saffronspoon.in</div>
+        </div>
+      </div>
+      <form class="reservation-form reveal" id="reservationForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resName">Full Name</label>
+            <input type="text" id="resName" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="resPhone">Phone Number</label>
+            <input type="tel" id="resPhone" name="phone" placeholder="+91 98765 43210" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resGuests">Number of Guests</label>
+            <select id="resGuests" name="guests" required>
+              <option value="" disabled selected>Select guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7-8">7–8 Guests</option>
+              <option value="9-10">9–10 Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resDate">Preferred Date</label>
+            <input type="date" id="resDate" name="date" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resTime">Preferred Time</label>
+            <select id="resTime" name="time" required>
+              <option value="" disabled selected>Select time</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="12:30">12:30 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="13:30">1:30 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="19:30">7:30 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="20:30">8:30 PM</option>
+              <option value="21:00">9:00 PM</option>
+              <option value="21:30">9:30 PM</option>
+            </select>
+          </div>
+          <div class="form-group form-group-full">
+            <button type="submit" class="btn btn-primary btn-full">Reserve My Table</button>
+          </div>
+        </div>
+        <div class="form-success" id="formSuccess" hidden>
+          <span>✓</span> Reservation request sent! We'll confirm within 30 minutes.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location" class="section location-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Our Location</h2>
+    </div>
+    <div class="location-grid">
+      <div class="location-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.755!2d72.8777!3d19.076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzMzLjYiTiA3MsKwNTInMzkuNyJF!5e0!3m2!1sen!2sin!4v1" width="100%" height="450" style="border:0;border-radius:16px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Saffron Spoon on Google Maps"></iframe>
+      </div>
+      <div class="location-info reveal">
+        <div class="location-card">
+          <h3>📍 Address</h3>
+          <p>42, Saffron Lane, Bandra West<br />Mumbai, Maharashtra 400050</p>
+        </div>
+        <div class="location-card">
+          <h3>🕐 Working Hours</h3>
+          <div class="hours-list">
+            <div><span>Monday – Friday</span><span>12:00 PM – 11:00 PM</span></div>
+            <div><span>Saturday</span><span>11:00 AM – 11:30 PM</span></div>
+            <div><span>Sunday</span><span>11:00 AM – 10:00 PM</span></div>
+          </div>
+        </div>
+        <div class="location-card">
+          <h3>📞 Contact</h3>
+          <p>Phone: +91 98765 43210<br />Email: hello@saffronspoon.in</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><span>S</span> Saffron Spoon</div>
+        <p>"Every Meal Tells A Story"</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" aria-label="Twitter / X"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-hours">
+        <h4>Opening Hours</h4>
+        <div class="footer-hours-list">
+          <div><span>Mon – Fri</span><span>12 PM – 11 PM</span></div>
+          <div><span>Saturday</span><span>11 AM – 11:30 PM</span></div>
+          <div><span>Sunday</span><span>11 AM – 10 PM</span></div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#about">About Us</a>
+        <a href="#menu">Full Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reservation">Reservations</a>
+        <a href="#location">Find Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Saffron Spoon. All rights reserved.</p>
+      <p class="footer-credit">Designed &amp; Developed by <a href="https://deepbuilts.com" target="_blank" rel="noopener noreferrer">DeepBuilts</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING RESERVATION BUTTON ============ -->
+<a href="#reservation" class="floating-reserve" id="floatingReserve" aria-label="Reserve a table">
+  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+  <span>Reserve</span>
+</a>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

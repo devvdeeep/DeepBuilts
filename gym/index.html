@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IronPulse Fitness — Stronger Every Day.</title>
+<meta name="description" content="IronPulse Fitness — a premium gym experience. Stronger Every Day." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="logo-mark"><span>IP</span></div>
+    <div class="bar"><div class="bar-fill"></div></div>
+    <p>IronPulse Fitness</p>
+  </div>
+</div>
+
+<!-- Sticky Navbar -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">IP</span>
+      <span class="brand-text">IronPulse<em>Fitness</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#bmi">BMI</a>
+      <a href="#plans">Plans</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#plans" class="btn btn-primary nav-cta">Join Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow reveal">Premium Fitness Club · Est. 2015</p>
+    <h1 class="reveal">Forge Your <span class="accent">Strongest</span><br/>Self at IronPulse.</h1>
+    <p class="lead reveal">Stronger Every Day. World-class trainers, elite equipment, and a community engineered to push your limits.</p>
+    <div class="hero-cta reveal">
+      <a href="#plans" class="btn btn-primary btn-lg"><i class="fa-solid fa-bolt"></i> Join Now</a>
+      <a href="#about" class="btn btn-ghost btn-lg">Explore Club <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-meta reveal">
+      <div><i class="fa-solid fa-star"></i> 4.9/5 rating</div>
+      <div><i class="fa-solid fa-shield-halved"></i> Certified coaches</div>
+      <div><i class="fa-solid fa-clock"></i> Open 5AM – 11PM</div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span></span>Scroll</div>
+</section>
+
+<!-- Counters -->
+<section class="counters">
+  <div class="container counters-grid">
+    <div class="counter reveal"><h3 data-target="12500">0</h3><p>Active Members</p></div>
+    <div class="counter reveal"><h3 data-target="45">0</h3><p>Elite Trainers</p></div>
+    <div class="counter reveal"><h3 data-target="28">0</h3><p>Awards Won</p></div>
+    <div class="counter reveal"><h3 data-target="9">0</h3><p>Years Excellence</p></div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=80" alt="Gym interior">
+      <div class="badge"><i class="fa-solid fa-award"></i> Best Gym 2025</div>
+    </div>
+    <div class="about-text reveal">
+      <p class="eyebrow">About IronPulse</p>
+      <h2>Not just a gym.<br/><span class="accent">A performance sanctuary.</span></h2>
+      <p>IronPulse Fitness is where discipline meets design. From Olympic-grade platforms and biometric-tracked cardio to a boutique recovery zone, every square foot is engineered to make you stronger — physically and mentally.</p>
+      <ul class="about-list">
+        <li><i class="fa-solid fa-check"></i> Personalized coaching backed by data</li>
+        <li><i class="fa-solid fa-check"></i> 24-hour access with premium plans</li>
+        <li><i class="fa-solid fa-check"></i> Recovery suite: sauna, steam, ice</li>
+        <li><i class="fa-solid fa-check"></i> Community that shows up, every day</li>
+      </ul>
+      <a href="#plans" class="btn btn-primary">Start Your Journey</a>
+    </div>
+  </div>
+</section>
+
+<!-- Trainers -->
+<section id="trainers" class="trainers section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Meet The Team</p>
+      <h2>Trainers Who <span class="accent">Push Limits.</span></h2>
+      <p class="muted">Every trainer is certified, competition-proven, and obsessed with your progress.</p>
+    </div>
+    <div class="trainers-grid">
+      <div class="trainer-card reveal">
+        <div class="trainer-img" style="background-image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="trainer-info">
+          <h4>Arjun Rao</h4>
+          <p>Head Strength Coach</p>
+          <div class="socials"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+      </div>
+      <div class="trainer-card reveal">
+        <div class="trainer-img" style="background-image:url('https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="trainer-info">
+          <h4>Priya Nair</h4>
+          <p>HIIT & CrossFit</p>
+          <div class="socials"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+      </div>
+      <div class="trainer-card reveal">
+        <div class="trainer-img" style="background-image:url('https://images.unsplash.com/photo-1567013127542-490d757e51cd?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="trainer-info">
+          <h4>Rahul Verma</h4>
+          <p>Bodybuilding Pro</p>
+          <div class="socials"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+      </div>
+      <div class="trainer-card reveal">
+        <div class="trainer-img" style="background-image:url('https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="trainer-info">
+          <h4>Meera Kapoor</h4>
+          <p>Yoga & Mobility</p>
+          <div class="socials"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BMI Calculator -->
+<section id="bmi" class="bmi section">
+  <div class="container bmi-grid">
+    <div class="bmi-intro reveal">
+      <p class="eyebrow">Know Your Number</p>
+      <h2>BMI <span class="accent">Calculator.</span></h2>
+      <p class="muted">Enter your height and weight to instantly see where you stand — and where we can take you.</p>
+      <ul class="bmi-legend">
+        <li><span class="dot low"></span> Under 18.5 · Underweight</li>
+        <li><span class="dot ok"></span> 18.5 – 24.9 · Healthy</li>
+        <li><span class="dot mid"></span> 25 – 29.9 · Overweight</li>
+        <li><span class="dot high"></span> 30+ · Obese</li>
+      </ul>
+    </div>
+    <div class="bmi-card reveal">
+      <div class="form-row">
+        <label>Height (cm)</label>
+        <input type="number" id="bmiHeight" placeholder="e.g. 175" min="50" max="260"/>
+      </div>
+      <div class="form-row">
+        <label>Weight (kg)</label>
+        <input type="number" id="bmiWeight" placeholder="e.g. 70" min="20" max="400"/>
+      </div>
+      <div class="form-row grid-2">
+        <div>
+          <label>Age</label>
+          <input type="number" id="bmiAge" placeholder="e.g. 28" min="5" max="120"/>
+        </div>
+        <div>
+          <label>Gender</label>
+          <select id="bmiGender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="bmiCalc"><i class="fa-solid fa-calculator"></i> Calculate BMI</button>
+      <div class="bmi-result" id="bmiResult">
+        <div class="bmi-num">—</div>
+        <div class="bmi-cat">Enter your details</div>
+        <div class="bmi-bar"><div class="bmi-fill" id="bmiFill"></div><div class="bmi-marker" id="bmiMarker"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Plans -->
+<section id="plans" class="plans section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Membership</p>
+      <h2>Plans Built To <span class="accent">Perform.</span></h2>
+      <p class="muted">No contracts. Cancel anytime. All plans include app access and locker use.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card reveal">
+        <h4>Monthly</h4>
+        <div class="price"><span class="cur">₹</span>2,499<span class="per">/mo</span></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Full gym access</li>
+          <li><i class="fa-solid fa-check"></i> Group classes</li>
+          <li><i class="fa-solid fa-check"></i> Locker included</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> Personal trainer</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> Steam & sauna</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Choose Monthly</a>
+      </div>
+      <div class="plan-card featured reveal">
+        <div class="ribbon">Most Popular</div>
+        <h4>Quarterly</h4>
+        <div class="price"><span class="cur">₹</span>6,499<span class="per">/3 mo</span></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Everything in Monthly</li>
+          <li><i class="fa-solid fa-check"></i> 2 PT sessions / month</li>
+          <li><i class="fa-solid fa-check"></i> Nutrition plan</li>
+          <li><i class="fa-solid fa-check"></i> Steam & sauna</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> 24/7 access</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-block">Choose Quarterly</a>
+      </div>
+      <div class="plan-card reveal">
+        <h4>Yearly</h4>
+        <div class="price"><span class="cur">₹</span>19,999<span class="per">/yr</span></div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Everything in Quarterly</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited PT</li>
+          <li><i class="fa-solid fa-check"></i> 24/7 access</li>
+          <li><i class="fa-solid fa-check"></i> Free merch kit</li>
+          <li><i class="fa-solid fa-check"></i> Guest passes (4)</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Choose Yearly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Facilities -->
+<section id="facilities" class="facilities section alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">World-class</p>
+      <h2>Facilities & <span class="accent">Amenities.</span></h2>
+    </div>
+    <div class="fac-grid">
+      <div class="fac reveal"><i class="fa-solid fa-heart-pulse"></i><h5>Cardio Zone</h5><p>Smart treadmills, bikes, rowers, and stair-climbers with heart-rate sync.</p></div>
+      <div class="fac reveal"><i class="fa-solid fa-dumbbell"></i><h5>Strength Floor</h5><p>Olympic platforms, Hammer Strength & free weights up to 60kg dumbbells.</p></div>
+      <div class="fac reveal"><i class="fa-solid fa-fire"></i><h5>CrossFit Box</h5><p>Rigs, rings, sleds, and a dedicated coach-led CrossFit programming.</p></div>
+      <div class="fac reveal"><i class="fa-solid fa-spa"></i><h5>Yoga Studio</h5><p>Heated studio with daily Vinyasa, Hatha & mobility flow classes.</p></div>
+      <div class="fac reveal"><i class="fa-solid fa-lock"></i><h5>Premium Lockers</h5><p>Digital keypad lockers with luxe change rooms and rain-showers.</p></div>
+      <div class="fac reveal"><i class="fa-solid fa-hot-tub-person"></i><h5>Steam & Sauna</h5><p>Finnish sauna and eucalyptus steam for accelerated recovery.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Inside The Club</p>
+      <h2>The <span class="accent">Gallery.</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item reveal" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="g-item tall reveal" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="g-item reveal" style="background-image:url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="g-item wide reveal" style="background-image:url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1000&q=80')"></div>
+      <div class="g-item reveal" style="background-image:url('https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="g-item reveal" style="background-image:url('https://images.unsplash.com/photo-1554344728-77cf90d9ed26?auto=format&fit=crop&w=800&q=80')"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Transformations -->
+<section class="transform section alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Real People. Real Results.</p>
+      <h2>Transformation <span class="accent">Stories.</span></h2>
+    </div>
+    <div class="transform-grid">
+      <div class="story reveal">
+        <div class="story-img" style="background-image:url('https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="story-body">
+          <div class="lostwon"><span>-18 kg</span><span>+6 months</span></div>
+          <h5>Ankit S.</h5>
+          <p>"IronPulse rebuilt my confidence. The coaches never let me quit."</p>
+        </div>
+      </div>
+      <div class="story reveal">
+        <div class="story-img" style="background-image:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="story-body">
+          <div class="lostwon"><span>+8 kg lean</span><span>+9 months</span></div>
+          <h5>Neha K.</h5>
+          <p>"Went from skinny to strong. This place is a machine."</p>
+        </div>
+      </div>
+      <div class="story reveal">
+        <div class="story-img" style="background-image:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="story-body">
+          <div class="lostwon"><span>-24 kg</span><span>+12 months</span></div>
+          <h5>Rohit M.</h5>
+          <p>"They didn't just train me — they coached my mindset."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Members Speak</p>
+      <h2>What The <span class="accent">Community Says.</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Cleanest, most premium gym I've ever trained at. The energy is unmatched.</p>
+        <div class="who"><strong>Vikram J.</strong><span>Member · 3 yrs</span></div>
+      </div>
+      <div class="testi reveal">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Trainers actually care. My deadlift went from 80 to 160 in a year.</p>
+        <div class="who"><strong>Sana R.</strong><span>Member · 2 yrs</span></div>
+      </div>
+      <div class="testi reveal">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>The steam and sauna after leg day is the best recovery in the city.</p>
+        <div class="who"><strong>Aditya P.</strong><span>Member · 1 yr</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule" class="schedule section alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Weekly Timetable</p>
+      <h2>Class <span class="accent">Schedule.</span></h2>
+      <p class="muted">All classes are included in Quarterly & Yearly plans.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6:00 AM</td><td>HIIT</td><td>Yoga</td><td>HIIT</td><td>Yoga</td><td>CrossFit</td><td>Bootcamp</td></tr>
+          <tr><td>8:00 AM</td><td>Strength</td><td>Cardio</td><td>Strength</td><td>Cardio</td><td>Strength</td><td>Mobility</td></tr>
+          <tr><td>10:00 AM</td><td>Zumba</td><td>Pilates</td><td>Zumba</td><td>Pilates</td><td>Zumba</td><td>Yoga</td></tr>
+          <tr><td>6:00 PM</td><td>CrossFit</td><td>Boxing</td><td>CrossFit</td><td>Boxing</td><td>CrossFit</td><td>Open Gym</td></tr>
+          <tr><td>8:00 PM</td><td>Yoga</td><td>Strength</td><td>Yoga</td><td>Strength</td><td>Recovery</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact section">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Come Train <span class="accent">With Us.</span></h2>
+      <p class="muted">Drop in for a tour or book a free trial session. We'd love to meet you.</p>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-location-dot"></i> 12 Fitness Avenue, Bengaluru, KA 560001</li>
+        <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+        <li><i class="fa-solid fa-envelope"></i> hello@ironpulse.fit</li>
+        <li><i class="fa-solid fa-clock"></i> Mon – Sun · 5:00 AM – 11:00 PM</li>
+      </ul>
+      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Message Sent ✓';">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Tell us your goal..." rows="3" required></textarea>
+        <button class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+    <div class="contact-map reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15552.404982248466!2d77.5945627!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container foot-grid">
+    <div>
+      <a href="#home" class="brand">
+        <span class="brand-mark">IP</span>
+        <span class="brand-text">IronPulse<em>Fitness</em></span>
+      </a>
+      <p class="muted">Stronger Every Day. A premium fitness club engineered for results.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <a href="#about">About</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#plans">Plans</a>
+      <a href="#facilities">Facilities</a>
+    </div>
+    <div>
+      <h5>Support</h5>
+      <a href="#contact">Contact</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#bmi">BMI Tool</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+    <div>
+      <h5>Newsletter</h5>
+      <p class="muted">Get workouts, nutrition &amp; offers in your inbox.</p>
+      <form class="news" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Subscribed ✓';">
+        <input type="email" placeholder="you@email.com" required>
+        <button class="btn btn-primary">Join</button>
+      </form>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>© <span id="year"></span> IronPulse Fitness. All rights reserved.</p>
+    <p>Crafted with 🖤 for those who lift.</p>
+    <p class="made-by"><strong>Made by DeepBuilts</strong></p>
+  </div>
+</footer>
+
+<!-- Floating Join button -->
+<a href="#plans" class="float-join" aria-label="Join Now">
+  <i class="fa-solid fa-bolt"></i>
+  <span>Join Now</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

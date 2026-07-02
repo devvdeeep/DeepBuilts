@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Elevate Academy — Building Futures Through Quality Education. Top coaching for JEE, NEET, MHT-CET, Foundation & Commerce." />
+<meta name="theme-color" content="#1e40af" />
+<title>Elevate Academy — Building Futures Through Quality Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* ================================================================
+   ELEVATE ACADEMY — Modern Coaching Institute
+   Theme: Blue & White · Clean · Professional · Trustworthy
+================================================================ */
+
+:root{
+  --blue:#1e40af;
+  --blue-600:#2563eb;
+  --blue-500:#3b82f6;
+  --cyan:#0891b2;
+  --navy:#0f172a;
+  --ink:#1e293b;
+  --slate:#475569;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --bg:#ffffff;
+  --bg-soft:#f8fafc;
+  --bg-blue:#eff6ff;
+  --gold:#f59e0b;
+  --white:#ffffff;
+  --shadow-sm:0 2px 8px rgba(30,64,175,.06);
+  --shadow:0 12px 32px rgba(30,64,175,.10);
+  --shadow-lg:0 24px 60px rgba(30,64,175,.16);
+  --radius:16px;
+  --radius-lg:24px;
+  --transition:.35s cubic-bezier(.22,.61,.36,1);
+  --grad-blue:linear-gradient(120deg,#2563eb,#0891b2);
+  --grad-gold:linear-gradient(120deg,#f59e0b,#fbbf24);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2;color:var(--navy);font-weight:700}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+ul{list-style:none}
+::selection{background:var(--blue-500);color:#fff}
+
+.container{width:min(1200px,92%);margin-inline:auto}
+.container.narrow{width:min(820px,92%)}
+.section{padding:100px 0;position:relative}
+.grad{background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.grad-gold{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:15px 30px;border-radius:50px;font-weight:600;font-size:15px;
+  font-family:'Poppins',sans-serif;cursor:pointer;border:none;
+  transition:var(--transition);position:relative;
+}
+.btn.sm{padding:12px 24px;font-size:14px}
+.btn.full{width:100%;justify-content:center}
+.btn-primary{background:var(--grad-blue);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,.32)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(37,99,235,.42)}
+.btn-primary:active{transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--blue);border:2px solid var(--blue-500)}
+.btn-ghost:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-3px)}
+.btn .arrow{transition:transform .3s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+.eyebrow{
+  display:inline-block;font-family:'Poppins',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--blue-600);
+  margin-bottom:14px;
+}
+.section-head{text-align:center;max-width:680px;margin:0 auto 60px}
+.section-head h2{font-size:clamp(28px,4vw,44px)}
+.section-sub{color:var(--muted);margin-top:14px;font-size:17px}
+
+/* ================= LOADER ================= */
+.loader{
+  position:fixed;inset:0;z-index:9999;background:var(--navy);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  transition:opacity .6s ease,visibility .6s ease;
+}
+.loader.hide{opacity:0;visibility:hidden}
+.loader-logo{display:flex;align-items:center;gap:14px}
+.loader-mark{
+  width:56px;height:56px;border-radius:14px;background:var(--grad-blue);
+  display:grid;place-items:center;color:#fff;font-family:'Poppins';font-weight:800;font-size:28px;
+  animation:pop .6s ease;
+}
+.loader-name{font-family:'Poppins';font-weight:700;font-size:24px;color:#fff}
+.loader-bar{width:200px;height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden}
+.loader-bar span{display:block;height:100%;width:0;background:var(--grad-blue);border-radius:4px;animation:load 1.4s ease forwards}
+@keyframes load{to{width:100%}}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;z-index:900;
+  padding:18px 0;transition:var(--transition);
+}
+.navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);box-shadow:var(--shadow-sm);padding:12px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.brand-mark{
+  width:42px;height:42px;border-radius:11px;background:var(--grad-blue);
+  display:grid;place-items:center;color:#fff;font-family:'Poppins';font-weight:800;font-size:22px;
+  box-shadow:0 6px 16px rgba(37,99,235,.3);
+}
+.brand-text{font-family:'Poppins';font-weight:500;font-size:21px;color:var(--navy)}
+.brand-text strong{font-weight:800;color:var(--blue-600)}
+.brand.light .brand-text,.brand.light{color:#fff}
+.brand.light .brand-text strong{color:var(--blue-500)}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{
+  padding:9px 15px;font-weight:500;font-size:15px;color:var(--slate);border-radius:9px;
+  transition:var(--transition);position:relative;
+}
+.nav-links a:not(.nav-cta):hover,.nav-links a.active{color:var(--blue-600)}
+.nav-links a:not(.nav-cta)::after{
+  content:'';position:absolute;bottom:2px;left:15px;right:15px;height:2px;
+  background:var(--grad-blue);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.nav-links a:not(.nav-cta):hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-cta{background:var(--grad-blue);color:#fff!important;padding:11px 22px!important;box-shadow:0 8px 18px rgba(37,99,235,.3)}
+.nav-cta:hover{transform:translateY(-2px)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.nav-toggle span{width:26px;height:3px;background:var(--navy);border-radius:3px;transition:var(--transition)}
+.nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  padding:120px 0 80px;overflow:hidden;
+  background:linear-gradient(150deg,#eff6ff 0%,#f8fafc 45%,#ffffff 100%);
+}
+.hero-shapes .shape{position:absolute;border-radius:50%;opacity:.5;filter:blur(2px)}
+.shape.s1{width:340px;height:340px;background:radial-gradient(circle,rgba(59,130,246,.25),transparent 70%);top:-80px;right:-60px;animation:float1 9s ease-in-out infinite}
+.shape.s2{width:260px;height:260px;background:radial-gradient(circle,rgba(8,145,178,.2),transparent 70%);bottom:-40px;left:-40px;animation:float2 11s ease-in-out infinite}
+.shape.s3{width:150px;height:150px;background:radial-gradient(circle,rgba(245,158,11,.18),transparent 70%);top:30%;left:8%;animation:float1 7s ease-in-out infinite}
+.shape.s4{width:90px;height:90px;border:3px dashed rgba(37,99,235,.2);background:none;filter:none;top:20%;right:14%;animation:spin 20s linear infinite}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-24px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-content{animation:fadeUp .9s ease both}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--blue-600);
+  padding:9px 18px;border-radius:50px;font-weight:600;font-size:14px;
+  box-shadow:var(--shadow-sm);border:1px solid var(--line);margin-bottom:24px;
+}
+.badge.pulse{position:relative}
+.badge.pulse::before{content:'';position:absolute;left:14px;top:50%;transform:translateY(-50%);width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 rgba(34,197,94,.5);animation:pulse 1.8s infinite}
+.badge.pulse{padding-left:30px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero-content h1{font-size:clamp(34px,5.2vw,58px);font-weight:800;margin-bottom:20px}
+.hero-content>p{font-size:18px;color:var(--slate);max-width:520px;margin-bottom:32px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:12px}
+.hero-trust .stars{color:var(--gold);font-size:18px;letter-spacing:2px}
+.hero-trust p{font-size:14px;color:var(--muted)}
+.hero-trust strong{color:var(--navy)}
+
+.hero-visual{position:relative;animation:fadeUp .9s .2s both}
+.hero-card-img{
+  height:440px;border-radius:var(--radius-lg);
+  background:linear-gradient(135deg,#1e40af,#0891b2);
+  display:grid;place-items:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.hero-card-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.2),transparent 50%)}
+.img-label{color:#fff;font-family:'Poppins';font-weight:600;font-size:18px;background:rgba(15,23,42,.35);padding:10px 20px;border-radius:50px;backdrop-filter:blur(4px);z-index:2}
+.float-card{
+  position:absolute;background:#fff;border-radius:14px;padding:14px 18px;
+  display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);border:1px solid var(--line);
+}
+.float-card .fc-icon{font-size:26px}
+.float-card strong{display:block;font-family:'Poppins';font-weight:800;font-size:19px;color:var(--navy);line-height:1}
+.float-card small{color:var(--muted);font-size:12px}
+.fc1{top:24px;left:-28px;animation:float1 5s ease-in-out infinite}
+.fc2{bottom:34px;right:-24px;animation:float2 6s ease-in-out infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+
+/* ================= STATS ================= */
+.stats{background:var(--navy);padding:56px 0;position:relative;z-index:3}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.stat{position:relative}
+.stat:not(:last-child)::after{content:'';position:absolute;right:-15px;top:15%;height:70%;width:1px;background:rgba(255,255,255,.14)}
+.stat-num{display:block;font-family:'Poppins';font-weight:800;font-size:clamp(32px,4vw,46px);background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{color:#cbd5e1;font-size:15px;font-weight:500}
+
+/* ================= ABOUT ================= */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.about-visual{position:relative}
+.about-img{height:440px;border-radius:var(--radius-lg);background:linear-gradient(135deg,#2563eb,#1e3a8a);display:grid;place-items:center;box-shadow:var(--shadow-lg)}
+.about-badge{
+  position:absolute;bottom:-24px;right:-20px;background:#fff;border-radius:18px;
+  padding:20px 26px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line);
+}
+.about-badge strong{display:block;font-family:'Poppins';font-weight:800;font-size:34px;color:var(--blue-600);line-height:1}
+.about-badge span{color:var(--muted);font-size:13px;font-weight:500}
+.about-content h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px}
+.about-content>p{color:var(--slate);font-size:17px;margin-bottom:28px}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mv-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:var(--transition)}
+.mv-card:hover{background:var(--bg-blue);transform:translateY(-4px);box-shadow:var(--shadow)}
+.mv-icon{font-size:30px;display:block;margin-bottom:12px}
+.mv-card h3{font-size:19px;margin-bottom:8px}
+.mv-card p{color:var(--muted);font-size:14.5px}
+
+/* ================= COURSES ================= */
+.courses{background:var(--bg-soft)}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.course-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:34px 30px;
+  transition:var(--transition);position:relative;overflow:hidden;
+}
+.course-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--grad-blue);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.course-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);border-color:transparent}
+.course-card:hover::before{transform:scaleX(1)}
+.course-card.featured{background:var(--grad-blue);border-color:transparent;color:#fff}
+.course-card.featured::before{display:none}
+.course-card.featured h3,.course-card.featured p{color:#fff}
+.course-card.featured .course-meta li{color:rgba(255,255,255,.85)}
+.course-card.featured .course-meta li::before{color:#fff}
+.course-card.featured .course-link{color:#fff}
+.ribbon{position:absolute;top:20px;right:-34px;background:var(--gold);color:#fff;font-size:12px;font-weight:700;padding:5px 40px;transform:rotate(45deg);font-family:'Poppins'}
+.course-icon{font-size:44px;margin-bottom:18px}
+.course-card h3{font-size:21px;margin-bottom:12px}
+.course-card p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.course-meta{margin-bottom:22px}
+.course-meta li{font-size:14px;color:var(--slate);padding-left:22px;position:relative;margin-bottom:6px}
+.course-meta li::before{content:'✓';position:absolute;left:0;color:var(--blue-600);font-weight:700}
+.course-link{font-family:'Poppins';font-weight:600;font-size:15px;color:var(--blue-600);transition:var(--transition)}
+.course-link:hover{letter-spacing:.5px}
+.cta-card{background:var(--bg-blue);border:2px dashed var(--blue-500);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.cta-card:hover{transform:translateY(-6px)}
+
+/* ================= FACULTY ================= */
+.faculty-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.faculty-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px 24px;
+  text-align:center;transition:var(--transition);
+}
+.faculty-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:transparent}
+.faculty-avatar{
+  width:88px;height:88px;border-radius:50%;margin:0 auto 18px;
+  display:grid;place-items:center;font-family:'Poppins';font-weight:800;font-size:30px;color:#fff;
+  background:var(--c,var(--blue));box-shadow:0 10px 24px rgba(30,64,175,.25);
+}
+.faculty-card h3{font-size:19px;margin-bottom:4px}
+.faculty-role{display:inline-block;color:var(--blue-600);font-weight:600;font-size:14px;margin-bottom:12px}
+.faculty-qual{font-size:14px;color:var(--slate);font-weight:600}
+.faculty-exp{font-size:13px;color:var(--muted)}
+
+/* ================= RESULTS ================= */
+.results{background:var(--navy);color:#fff}
+.section-head.light h2{color:#fff}
+.section-head.light .section-sub{color:#94a3b8}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-bottom:54px}
+.result-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);
+  padding:30px 24px;text-align:center;transition:var(--transition);backdrop-filter:blur(6px);position:relative;
+}
+.result-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.09);border-color:rgba(245,158,11,.4)}
+.result-avatar{width:70px;height:70px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-family:'Poppins';font-weight:800;font-size:24px;color:#fff;background:var(--grad-blue)}
+.result-rank{display:inline-block;background:var(--grad-gold);color:#3b2500;font-family:'Poppins';font-weight:700;font-size:14px;padding:5px 16px;border-radius:50px;margin-bottom:12px}
+.result-card h3{color:#fff;font-size:18px;margin-bottom:4px}
+.result-card p{color:#94a3b8;font-size:14px}
+.achievements{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:44px;border-top:1px solid rgba(255,255,255,.12)}
+.ach{text-align:center}
+.ach strong{display:block;font-family:'Poppins';font-weight:800;font-size:38px;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ach span{color:#94a3b8;font-size:14px}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials{background:var(--bg-soft)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:34px 30px;
+  transition:var(--transition);position:relative;
+}
+.testi-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.quote-mark{font-family:'Poppins';font-weight:800;font-size:70px;color:var(--blue-500);opacity:.15;line-height:.6;height:34px}
+.testi-card p{color:var(--slate);font-size:15.5px;margin-bottom:24px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:14px}
+.testi-avatar{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-family:'Poppins';font-weight:700;color:#fff;background:var(--grad-blue);font-size:17px}
+.testi-author strong{display:block;font-family:'Poppins';font-size:16px;color:var(--navy)}
+.testi-author small{color:var(--muted);font-size:13px}
+
+/* ================= FACILITIES ================= */
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.fac-card{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-lg);padding:34px 26px;
+  text-align:center;transition:var(--transition);
+}
+.fac-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);background:#fff;border-color:transparent}
+.fac-icon{font-size:46px;display:block;margin-bottom:16px}
+.fac-card h3{font-size:19px;margin-bottom:10px}
+.fac-card p{color:var(--muted);font-size:14.5px}
+
+/* ================= GALLERY ================= */
+.gallery{background:var(--bg-soft)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:18px}
+.gal-item{
+  border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;
+  display:grid;place-items:center;transition:var(--transition);
+  background:linear-gradient(135deg,#2563eb,#0891b2);
+}
+.gal-item:nth-child(2){background:linear-gradient(135deg,#1e40af,#3b82f6)}
+.gal-item:nth-child(3){background:linear-gradient(135deg,#0891b2,#0e7490)}
+.gal-item:nth-child(5){background:linear-gradient(135deg,#1e3a8a,#2563eb)}
+.gal-item:nth-child(6){background:linear-gradient(135deg,#0e7490,#155e75)}
+.gal-item.g-tall{grid-row:span 2}
+.gal-item.g-wide{grid-column:span 2}
+.gal-item span{color:#fff;font-family:'Poppins';font-weight:600;font-size:16px;z-index:2;background:rgba(15,23,42,.3);padding:8px 18px;border-radius:50px;backdrop-filter:blur(4px)}
+.gal-item::after{content:'🔍';position:absolute;inset:0;background:rgba(15,23,42,.55);display:grid;place-items:center;font-size:34px;opacity:0;transition:var(--transition)}
+.gal-item:hover::after{opacity:1}
+.gal-item:hover{transform:scale(1.02)}
+
+/* ================= ADMISSION ================= */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-bottom:54px;position:relative}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px 26px;text-align:center;transition:var(--transition);position:relative}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.step-num{width:54px;height:54px;border-radius:50%;background:var(--grad-blue);color:#fff;display:grid;place-items:center;font-family:'Poppins';font-weight:800;font-size:22px;margin:0 auto 18px;box-shadow:0 8px 20px rgba(37,99,235,.3)}
+.step h3{font-size:18px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:14px}
+.admission-cta{
+  background:var(--grad-blue);border-radius:var(--radius-lg);padding:44px 48px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.admission-cta::before{content:'';position:absolute;top:-40px;right:-20px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
+.admission-cta h3{color:#fff;font-size:26px;margin-bottom:6px}
+.admission-cta p{color:rgba(255,255,255,.9)}
+.admission-cta .btn-primary{background:#fff;color:var(--blue-600);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+
+/* ================= FAQ ================= */
+.faq-list{display:flex;flex-direction:column;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:var(--transition)}
+.faq-item:hover{box-shadow:var(--shadow-sm)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:22px 24px;font-family:'Poppins';font-weight:600;font-size:16.5px;color:var(--navy);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.faq-icon{font-size:24px;color:var(--blue-600);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted);font-size:15px}
+
+/* ================= CONTACT ================= */
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start}
+.contact-info h2{font-size:clamp(28px,4vw,40px);margin-bottom:14px}
+.contact-info>p{color:var(--slate);margin-bottom:28px}
+.contact-list{margin-bottom:28px}
+.contact-list li{display:flex;gap:16px;margin-bottom:20px}
+.ci-icon{font-size:22px;width:46px;height:46px;flex-shrink:0;border-radius:12px;background:var(--bg-blue);display:grid;place-items:center}
+.contact-list strong{font-family:'Poppins';font-size:15px;color:var(--navy)}
+.contact-list p{color:var(--muted);font-size:14.5px}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);height:220px;box-shadow:var(--shadow-sm)}
+.map iframe{width:100%;height:100%;border:0}
+.contact-form{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:38px;box-shadow:var(--shadow)}
+.contact-form h3{font-size:24px;margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:'Poppins';font-weight:500;font-size:14px;color:var(--slate);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:11px;
+  font-family:'Inter';font-size:15px;color:var(--ink);background:var(--bg-soft);transition:var(--transition);
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue-500);background:#fff;box-shadow:0 0 0 4px rgba(59,130,246,.12)}
+.field textarea{resize:vertical}
+.form-note{margin-top:14px;font-size:14px;font-weight:600;text-align:center}
+.form-note.ok{color:#16a34a}
+.form-note.err{color:#dc2626}
+
+/* ================= FOOTER ================= */
+.footer{background:var(--navy);color:#cbd5e1;padding:70px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px}
+.footer-brand>p{margin:18px 0 22px;font-size:14.5px;color:#94a3b8;max-width:320px}
+.footer-social{display:flex;gap:12px}
+.soc{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-weight:700;color:#fff;transition:var(--transition)}
+.soc:hover{background:var(--grad-blue);transform:translateY(-3px)}
+.footer-col h4{color:#fff;font-size:16px;margin-bottom:18px}
+.footer-col a{display:block;color:#94a3b8;font-size:14.5px;padding:5px 0;transition:var(--transition)}
+.footer-col a:hover{color:#fff;padding-left:5px}
+.fh{display:flex;justify-content:space-between;font-size:14px;color:#94a3b8;margin-bottom:8px;gap:12px}
+.fh span{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0}
+.footer-bottom .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom p{font-size:13.5px;color:#94a3b8;margin:0}
+.footer-credit a{color:var(--blue-500);font-weight:600;transition:var(--transition)}
+.footer-credit a:hover{color:#fff;text-shadow:0 0 12px rgba(59,130,246,.5)}
+
+/* ================= FLOATING + BACK TOP ================= */
+.float-enroll{
+  position:fixed;bottom:26px;left:26px;z-index:800;
+  background:var(--grad-gold);color:#3b2500;font-family:'Poppins';font-weight:700;font-size:14.5px;
+  padding:14px 22px;border-radius:50px;box-shadow:0 12px 28px rgba(245,158,11,.4);
+  transition:var(--transition);animation:bob 2.4s ease-in-out infinite;
+}
+.float-enroll:hover{transform:translateY(-4px) scale(1.04)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.back-top{
+  position:fixed;bottom:26px;right:26px;z-index:800;width:50px;height:50px;border-radius:14px;border:none;
+  background:var(--grad-blue);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 10px 24px rgba(37,99,235,.4);
+  opacity:0;visibility:hidden;transform:translateY(20px);transition:var(--transition);
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-top:hover{transform:translateY(-4px)}
+
+/* ================= REVEAL ================= */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:980px){
+  .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .hero-visual{max-width:480px;margin:0 auto}
+  .course-grid,.faculty-grid,.results-grid,.testi-grid,.fac-grid,.steps,.achievements{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px}
+  .stat:nth-child(2)::after{display:none}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:760px){
+  .nav-links{
+    position:fixed;top:0;right:-100%;height:100vh;width:min(300px,80%);
+    background:#fff;flex-direction:column;align-items:flex-start;gap:6px;padding:100px 30px 40px;
+    box-shadow:-10px 0 40px rgba(0,0,0,.12);transition:right .4s ease;
+  }
+  .nav-links.open{right:0}
+  .nav-links a{width:100%;padding:12px 15px}
+  .nav-cta{width:100%;justify-content:center;margin-top:8px}
+  .nav-toggle{display:flex;z-index:10}
+  .section{padding:70px 0}
+  .hero{padding:110px 0 60px}
+}
+@media (max-width:520px){
+  .course-grid,.faculty-grid,.results-grid,.testi-grid,.fac-grid,.steps,.achievements,.stats-grid,.gallery-grid,.mv-grid,.footer-grid{grid-template-columns:1fr}
+  .gal-item.g-tall,.gal-item.g-wide{grid-row:auto;grid-column:auto}
+  .contact-form{padding:26px}
+  .admission-cta{padding:32px 26px;text-align:center;justify-content:center}
+  .float-enroll{font-size:13px;padding:12px 18px;bottom:20px;left:16px}
+  .back-top{bottom:20px;right:16px}
+  .float-card{display:none}
+}
+
+/* ================= REDUCED MOTION ================= */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ================= IMAGE FILLS (AI-generated) ================= */
+.has-img{background-size:cover !important;background-position:center !important;background-repeat:no-repeat !important}
+.hero-card-img.has-img .img-label,.about-img.has-img .img-label{display:none}
+.faculty-avatar.has-img,.result-avatar.has-img,.testi-avatar.has-img{color:transparent !important;font-size:0 !important;border:2px solid rgba(255,255,255,.6)}
+.result-avatar.has-img,.testi-avatar.has-img{border-color:rgba(255,255,255,.25)}
+.gal-item.has-img span{position:absolute;bottom:12px;left:12px;font-size:14px}
+.gal-item.has-img::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,.45),transparent 45%);z-index:1}
+
+</style>
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-logo">
+    <span class="loader-mark">E</span>
+    <span class="loader-name">Elevate Academy</span>
+  </div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand" aria-label="Elevate Academy home">
+      <span class="brand-mark">E</span>
+      <span class="brand-text">Elevate<strong>Academy</strong></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#results">Results</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+      <a href="#admission" class="nav-cta">Enroll Now</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-shapes" aria-hidden="true">
+    <span class="shape s1"></span>
+    <span class="shape s2"></span>
+    <span class="shape s3"></span>
+    <span class="shape s4"></span>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="badge pulse">🎓 Admissions Open 2026–27</span>
+      <h1>Building Futures Through <span class="grad">Quality Education</span></h1>
+      <p>India's trusted coaching institute for JEE, NEET, MHT-CET & Foundation. Learn from expert faculty, achieve top ranks, and elevate your future.</p>
+      <div class="hero-btns">
+        <a href="#admission" class="btn btn-primary">Enroll Now <span class="arrow">→</span></a>
+        <a href="#courses" class="btn btn-ghost">Explore Courses</a>
+      </div>
+      <div class="hero-trust">
+        <div class="stars">★★★★★</div>
+        <p>Rated <strong>4.9/5</strong> by 3,000+ parents & students</p>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-img has-img" role="img" aria-label="Students studying at Elevate Academy" style="background-image:url('images/hero.png')">
+        <span class="img-label">📚 Smart Classroom</span>
+      </div>
+      <div class="float-card fc1">
+        <span class="fc-icon">🏆</span>
+        <div><strong>2,500+</strong><small>Selections</small></div>
+      </div>
+      <div class="float-card fc2">
+        <span class="fc-icon">👨‍🏫</span>
+        <div><strong>60+</strong><small>Expert Faculty</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" id="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <span class="stat-num" data-count="15000" data-suffix="+">0</span>
+      <span class="stat-label">Students Taught</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="2500" data-suffix="+">0</span>
+      <span class="stat-label">Selections</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="18" data-suffix="+">0</span>
+      <span class="stat-label">Years of Excellence</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="60" data-suffix="+">0</span>
+      <span class="stat-label">Expert Faculty</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <div class="about-img has-img" role="img" aria-label="Elevate Academy campus" style="background-image:url('images/about.png')"><span class="img-label">🏛️ Our Campus</span></div>
+      <div class="about-badge">
+        <strong>18+</strong>
+        <span>Years of Trust</span>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <span class="eyebrow">About Elevate Academy</span>
+      <h2>Where Ambition Meets <span class="grad">Excellence</span></h2>
+      <p>Founded in 2008, Elevate Academy began with a single classroom and a bold vision — to make world-class competitive exam preparation accessible to every dedicated student. Today, we stand as one of India's most trusted names in coaching, having shaped over 15,000 careers.</p>
+      <div class="mv-grid">
+        <div class="mv-card">
+          <span class="mv-icon">🎯</span>
+          <h3>Our Mission</h3>
+          <p>To empower every student with the knowledge, discipline, and confidence to crack India's toughest competitive exams.</p>
+        </div>
+        <div class="mv-card">
+          <span class="mv-icon">🔭</span>
+          <h3>Our Vision</h3>
+          <p>To be the nation's most trusted institute — nurturing future doctors, engineers, and leaders through quality education.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section class="section courses" id="courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Programs</span>
+      <h2>Courses Designed for <span class="grad">Success</span></h2>
+      <p class="section-sub">Comprehensive programs crafted by experts to help you reach your goals.</p>
+    </div>
+    <div class="course-grid">
+      <article class="course-card reveal">
+        <div class="course-icon">⚛️</div>
+        <h3>JEE (Main + Advanced)</h3>
+        <p>Complete engineering entrance preparation with concept-first teaching, regular tests, and IIT-focused mentoring.</p>
+        <ul class="course-meta">
+          <li>Classes 11, 12 & Droppers</li>
+          <li>Physics · Chemistry · Maths</li>
+        </ul>
+        <a href="#admission" class="course-link">Enroll Now →</a>
+      </article>
+      <article class="course-card featured reveal">
+        <span class="ribbon">Most Popular</span>
+        <div class="course-icon">🩺</div>
+        <h3>NEET (UG)</h3>
+        <p>Medical entrance coaching with NCERT mastery, biology depth, and thousands of practice MCQs for AIIMS & top colleges.</p>
+        <ul class="course-meta">
+          <li>Classes 11, 12 & Droppers</li>
+          <li>Physics · Chemistry · Biology</li>
+        </ul>
+        <a href="#admission" class="course-link">Enroll Now →</a>
+      </article>
+      <article class="course-card reveal">
+        <div class="course-icon">📐</div>
+        <h3>MHT-CET</h3>
+        <p>Focused Maharashtra CET coaching for engineering & pharmacy aspirants with state-board aligned strategy.</p>
+        <ul class="course-meta">
+          <li>Classes 11 & 12</li>
+          <li>PCM / PCB Groups</li>
+        </ul>
+        <a href="#admission" class="course-link">Enroll Now →</a>
+      </article>
+      <article class="course-card reveal">
+        <div class="course-icon">🌱</div>
+        <h3>Foundation</h3>
+        <p>Early-stage building for Classes 8–10 — strong fundamentals in Science & Maths plus Olympiad & NTSE prep.</p>
+        <ul class="course-meta">
+          <li>Classes 8, 9 & 10</li>
+          <li>Science · Maths · Mental Ability</li>
+        </ul>
+        <a href="#admission" class="course-link">Enroll Now →</a>
+      </article>
+      <article class="course-card reveal">
+        <div class="course-icon">📊</div>
+        <h3>Commerce</h3>
+        <p>Complete commerce stream coaching for Classes 11 & 12 plus CA/CS Foundation guidance for future professionals.</p>
+        <ul class="course-meta">
+          <li>Classes 11 & 12</li>
+          <li>Accounts · Economics · Maths</li>
+        </ul>
+        <a href="#admission" class="course-link">Enroll Now →</a>
+      </article>
+      <article class="course-card cta-card reveal">
+        <div class="course-icon">🎯</div>
+        <h3>Not sure which fits?</h3>
+        <p>Talk to our academic counsellors for a free personalized guidance session tailored to your goals.</p>
+        <a href="#contact" class="btn btn-primary sm">Book Free Counselling</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACULTY ============ -->
+<section class="section faculty" id="faculty">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Meet Our Mentors</span>
+      <h2>Learn From The <span class="grad">Best Faculty</span></h2>
+      <p class="section-sub">Experienced educators from premier institutes, dedicated to your success.</p>
+    </div>
+    <div class="faculty-grid">
+      <article class="faculty-card reveal">
+        <div class="faculty-avatar has-img" style="--c:#1e40af;background-image:url('images/faculty-rs.png')">RS</div>
+        <h3>Dr. Rajesh Sharma</h3>
+        <span class="faculty-role">Physics · JEE/NEET</span>
+        <p class="faculty-qual">Ph.D. (IIT Bombay)</p>
+        <p class="faculty-exp">20+ years experience</p>
+      </article>
+      <article class="faculty-card reveal">
+        <div class="faculty-avatar has-img" style="--c:#0891b2;background-image:url('images/faculty-ap.png')">AP</div>
+        <h3>Dr. Anjali Patil</h3>
+        <span class="faculty-role">Biology · NEET</span>
+        <p class="faculty-qual">MBBS, MD</p>
+        <p class="faculty-exp">15+ years experience</p>
+      </article>
+      <article class="faculty-card reveal">
+        <div class="faculty-avatar has-img" style="--c:#2563eb;background-image:url('images/faculty-vk.png')">VK</div>
+        <h3>Prof. Vikram Kulkarni</h3>
+        <span class="faculty-role">Mathematics · JEE</span>
+        <p class="faculty-qual">M.Sc. (IIT Delhi)</p>
+        <p class="faculty-exp">18+ years experience</p>
+      </article>
+      <article class="faculty-card reveal">
+        <div class="faculty-avatar has-img" style="--c:#0d9488;background-image:url('images/faculty-sm.png')">SM</div>
+        <h3>Dr. Sneha Mehta</h3>
+        <span class="faculty-role">Chemistry · JEE/NEET</span>
+        <p class="faculty-qual">Ph.D. Chemistry</p>
+        <p class="faculty-exp">16+ years experience</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section class="section results" id="results">
+  <div class="container">
+    <div class="section-head reveal light">
+      <span class="eyebrow">Our Pride</span>
+      <h2>Results That Speak <span class="grad-gold">For Themselves</span></h2>
+      <p class="section-sub">Celebrating our top achievers and their remarkable ranks.</p>
+    </div>
+    <div class="results-grid">
+      <article class="result-card reveal">
+        <div class="result-avatar has-img" style="background-image:url('images/result-ay.png')">AY</div>
+        <div class="result-rank">AIR 47</div>
+        <h3>Aarav Yadav</h3>
+        <p>JEE Advanced 2025 · IIT Bombay</p>
+      </article>
+      <article class="result-card reveal">
+        <div class="result-avatar has-img" style="background-image:url('images/result-pn.png')">PN</div>
+        <div class="result-rank">AIR 112</div>
+        <h3>Priya Nair</h3>
+        <p>NEET 2025 · AIIMS Delhi</p>
+      </article>
+      <article class="result-card reveal">
+        <div class="result-avatar has-img" style="background-image:url('images/result-rd.png')">RD</div>
+        <div class="result-rank">State Rank 3</div>
+        <h3>Rohan Deshmukh</h3>
+        <p>MHT-CET 2025 · COEP Pune</p>
+      </article>
+      <article class="result-card reveal">
+        <div class="result-avatar has-img" style="background-image:url('images/result-ik.png')">IK</div>
+        <div class="result-rank">AIR 208</div>
+        <h3>Ishita Kapoor</h3>
+        <p>JEE Main 2025 · NIT Trichy</p>
+      </article>
+    </div>
+    <div class="achievements reveal">
+      <div class="ach"><strong>340+</strong><span>IIT/NIT Selections</span></div>
+      <div class="ach"><strong>520+</strong><span>Medical Selections</span></div>
+      <div class="ach"><strong>96%</strong><span>Success Rate</span></div>
+      <div class="ach"><strong>50+</strong><span>Top 500 Ranks</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What Parents & Students <span class="grad">Say</span></h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi-card reveal">
+        <div class="quote-mark">"</div>
+        <p>Elevate Academy transformed my son's approach to studies. The faculty's dedication and doubt-clearing sessions are unmatched. He cracked JEE with a top rank!</p>
+        <div class="testi-author">
+          <div class="testi-avatar has-img" style="background-image:url('images/testi-mg.png')">MG</div>
+          <div><strong>Manisha Gupta</strong><small>Parent · JEE 2025</small></div>
+        </div>
+      </article>
+      <article class="testi-card reveal">
+        <div class="quote-mark">"</div>
+        <p>The structured tests and personal mentorship made all the difference. I always felt supported. I'm now studying at AIIMS thanks to Elevate!</p>
+        <div class="testi-author">
+          <div class="testi-avatar has-img" style="background-image:url('images/result-pn.png')">PN</div>
+          <div><strong>Priya Nair</strong><small>Student · NEET 2025</small></div>
+        </div>
+      </article>
+      <article class="testi-card reveal">
+        <div class="quote-mark">"</div>
+        <p>Excellent teaching methodology and a genuinely caring environment. The teachers treat every student like their own. Highly recommended!</p>
+        <div class="testi-author">
+          <div class="testi-avatar has-img" style="background-image:url('images/testi-sd.png')">SD</div>
+          <div><strong>Suresh Deshmukh</strong><small>Parent · MHT-CET 2025</small></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACILITIES ============ -->
+<section class="section facilities" id="facilities">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Infrastructure</span>
+      <h2>World-Class <span class="grad">Facilities</span></h2>
+      <p class="section-sub">A learning environment designed for focus, comfort, and success.</p>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-card reveal"><span class="fac-icon">🖥️</span><h3>Smart Classrooms</h3><p>Digital boards & AV-enabled rooms for interactive, engaging lessons.</p></div>
+      <div class="fac-card reveal"><span class="fac-icon">📚</span><h3>Library</h3><p>Extensive collection of reference books, journals & quiet study zones.</p></div>
+      <div class="fac-card reveal"><span class="fac-icon">💻</span><h3>Computer Lab</h3><p>Modern lab for online test series and computer-based mock exams.</p></div>
+      <div class="fac-card reveal"><span class="fac-icon">💬</span><h3>Doubt Sessions</h3><p>Dedicated daily doubt-clearing hours with one-on-one faculty attention.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Campus Life</span>
+      <h2>Our <span class="grad">Gallery</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gal-item reveal g-tall has-img" style="background-image:url('images/gal-classroom.png')"><span>🎓 Classroom</span></div>
+      <div class="gal-item reveal has-img" style="background-image:url('images/gal-award.png')"><span>🏆 Award Ceremony</span></div>
+      <div class="gal-item reveal has-img" style="background-image:url('images/gal-library.png')"><span>📖 Library</span></div>
+      <div class="gal-item reveal g-wide has-img" style="background-image:url('images/gal-seminar.png')"><span>👨‍🎓 Seminar Hall</span></div>
+      <div class="gal-item reveal has-img" style="background-image:url('images/gal-computer.png')"><span>💻 Computer Lab</span></div>
+      <div class="gal-item reveal has-img" style="background-image:url('images/gal-science.png')"><span>🧪 Science Lab</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMISSION PROCESS ============ -->
+<section class="section admission" id="admission">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get Started</span>
+      <h2>Simple <span class="grad">Admission Process</span></h2>
+      <p class="section-sub">Four easy steps to begin your journey with Elevate Academy.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="step-num">1</span><h3>Enquiry</h3><p>Fill the enquiry form or call our admission desk.</p></div>
+      <div class="step reveal"><span class="step-num">2</span><h3>Counselling</h3><p>Free session to choose the right course for you.</p></div>
+      <div class="step reveal"><span class="step-num">3</span><h3>Entrance Test</h3><p>Assessment to gauge your current preparation level.</p></div>
+      <div class="step reveal"><span class="step-num">4</span><h3>Enrollment</h3><p>Complete registration & begin your success journey.</p></div>
+    </div>
+    <div class="admission-cta reveal">
+      <div>
+        <h3>Ready to Elevate Your Future?</h3>
+        <p>Admissions for 2026–27 are now open. Limited seats available.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Apply Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">Questions?</span>
+      <h2>Frequently Asked <span class="grad">Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">What courses does Elevate Academy offer?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>We offer coaching for JEE (Main & Advanced), NEET, MHT-CET, Foundation (Classes 8–10), and Commerce streams with expert faculty and structured programs.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Are there batches for droppers?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes, we have dedicated repeater/dropper batches for JEE and NEET with intensive schedules and personalized mentoring.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Do you provide study material?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Absolutely. All enrolled students receive comprehensive, exam-focused study material, question banks, and access to our online test series.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">How can I take admission?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Simply fill the contact form below or visit our campus. Our counsellors will guide you through enquiry, counselling, an entrance test, and enrollment.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Is there a scholarship program?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes, meritorious students can avail scholarships up to 100% based on our scholarship-cum-admission test. Contact us for details.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Visit Our <span class="grad">Campus</span></h2>
+      <p>Have questions? Reach out to us — our team is always happy to help you take the next step.</p>
+      <ul class="contact-list">
+        <li><span class="ci-icon">📍</span><div><strong>Address</strong><p>2nd Floor, Knowledge Tower, FC Road, Pune, Maharashtra 411005</p></div></li>
+        <li><span class="ci-icon">📞</span><div><strong>Phone</strong><p>+91 98765 43210 · +91 91234 56789</p></div></li>
+        <li><span class="ci-icon">✉️</span><div><strong>Email</strong><p>admissions@elevateacademy.in</p></div></li>
+        <li><span class="ci-icon">🕐</span><div><strong>Office Hours</strong><p>Mon–Sat: 8:00 AM – 8:00 PM</p></div></li>
+      </ul>
+      <div class="map">
+        <iframe title="Elevate Academy location" src="https://www.openstreetmap.org/export/embed.html?bbox=73.83%2C18.51%2C73.86%2C18.53&layer=mapnik" loading="lazy"></iframe>
+      </div>
+    </div>
+    <form class="contact-form reveal" id="enquiryForm" novalidate>
+      <h3>Enquire Now</h3>
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+      <div class="field">
+        <label for="course">Course Interested In</label>
+        <select id="course" name="course" required>
+          <option value="">Select a course</option>
+          <option>JEE (Main + Advanced)</option>
+          <option>NEET</option>
+          <option>MHT-CET</option>
+          <option>Foundation</option>
+          <option>Commerce</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="3" placeholder="Your message (optional)"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary full">Submit Enquiry →</button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand light">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">Elevate<strong>Academy</strong></span>
+      </a>
+      <p>Building Futures Through Quality Education. India's trusted coaching institute for JEE, NEET, MHT-CET & more.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" class="soc">f</a>
+        <a href="#" aria-label="Instagram" class="soc">◎</a>
+        <a href="#" aria-label="YouTube" class="soc">▶</a>
+        <a href="#" aria-label="LinkedIn" class="soc">in</a>
+        <a href="#" aria-label="WhatsApp" class="soc">✆</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Courses</h4>
+      <a href="#courses">JEE</a>
+      <a href="#courses">NEET</a>
+      <a href="#courses">MHT-CET</a>
+      <a href="#courses">Foundation</a>
+      <a href="#courses">Commerce</a>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#results">Results</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p class="fh">Mon – Fri<span>8:00 AM – 8:00 PM</span></p>
+      <p class="fh">Saturday<span>8:00 AM – 6:00 PM</span></p>
+      <p class="fh">Sunday<span>Closed</span></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 Elevate Academy. All rights reserved.</p>
+      <p class="footer-credit">Designed &amp; Developed by <a href="#">DeepBuilts</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING + BACK TO TOP ============ -->
+<a href="#admission" class="float-enroll" aria-label="Enroll Now">🎓 Enroll Now</a>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  "use strict";
+
+  var reduceMotion = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ============ LOADER ============ */
+  window.addEventListener("load", function () {
+    var loader = document.getElementById("loader");
+    if (!loader) return;
+    setTimeout(function () { loader.classList.add("hide"); }, 900);
+  });
+
+  /* ============ NAVBAR SCROLL ============ */
+  var navbar = document.getElementById("navbar");
+  var backTop = document.getElementById("backTop");
+
+  function onScroll() {
+    var y = window.scrollY;
+    if (navbar) navbar.classList.toggle("scrolled", y > 40);
+    if (backTop) backTop.classList.toggle("show", y > 500);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ============ MOBILE MENU ============ */
+  var navToggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+
+  function closeMenu() {
+    if (navLinks) navLinks.classList.remove("open");
+    if (navToggle) {
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  }
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+      var open = navLinks.classList.toggle("open");
+      navToggle.classList.toggle("open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    navLinks.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", closeMenu);
+    });
+  }
+
+  /* ============ SMOOTH SCROLL ============ */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var id = link.getAttribute("href");
+      if (id === "#" || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    });
+  });
+
+  /* ============ BACK TO TOP ============ */
+  if (backTop) {
+    backTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
+
+  /* ============ SCROLL REVEAL ============ */
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    var revObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var delay = Math.min(i * 60, 240);
+          setTimeout(function () { el.classList.add("in"); }, delay);
+          revObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    reveals.forEach(function (el) { revObs.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ============ ANIMATED COUNTERS ============ */
+  var counters = document.querySelectorAll(".stat-num");
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+    var suffix = el.getAttribute("data-suffix") || "";
+    if (reduceMotion) { el.textContent = target.toLocaleString("en-IN") + suffix; return; }
+    var start = 0, dur = 1800, t0 = null;
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.floor(eased * target);
+      el.textContent = val.toLocaleString("en-IN") + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString("en-IN") + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window) {
+    var cObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          cObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { cObs.observe(el); });
+  } else {
+    counters.forEach(animateCount);
+  }
+
+  /* ============ ACTIVE NAV LINK ============ */
+  var sections = document.querySelectorAll("section[id]");
+  var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  if ("IntersectionObserver" in window) {
+    var secObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute("id");
+          navAnchors.forEach(function (a) {
+            a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+          });
+        }
+      });
+    }, { threshold: 0.4, rootMargin: "-80px 0px -50% 0px" });
+    sections.forEach(function (s) { secObs.observe(s); });
+  }
+
+  /* ============ HERO PARALLAX SHAPES ============ */
+  var shapes = document.querySelectorAll(".hero-shapes .shape");
+  if (shapes.length && !reduceMotion && window.matchMedia("(pointer:fine)").matches) {
+    document.querySelector(".hero").addEventListener("mousemove", function (e) {
+      var cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+      var dx = (e.clientX - cx) / cx, dy = (e.clientY - cy) / cy;
+      shapes.forEach(function (sh, i) {
+        var depth = (i + 1) * 8;
+        sh.style.transform = "translate(" + dx * depth + "px," + dy * depth + "px)";
+      });
+    });
+  }
+
+  /* ============ FAQ ACCORDION ============ */
+  document.querySelectorAll(".faq-item").forEach(function (item) {
+    var q = item.querySelector(".faq-q");
+    var a = item.querySelector(".faq-a");
+    if (!q || !a) return;
+    q.addEventListener("click", function () {
+      var isOpen = item.classList.contains("open");
+      // close all
+      document.querySelectorAll(".faq-item").forEach(function (other) {
+        other.classList.remove("open");
+        var oa = other.querySelector(".faq-a");
+        var oq = other.querySelector(".faq-q");
+        if (oa) oa.style.maxHeight = null;
+        if (oq) oq.setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        a.style.maxHeight = a.scrollHeight + "px";
+        q.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* ============ CONTACT FORM ============ */
+  var form = document.getElementById("enquiryForm");
+  var note = document.getElementById("formNote");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = form.name.value.trim();
+      var phone = form.phone.value.trim();
+      var email = form.email.value.trim();
+      var course = form.course.value;
+      if (!name || !phone || !email || !course) {
+        if (note) { note.textContent = "Please fill in all required fields."; note.className = "form-note err"; }
+        return;
+      }
+      if (note) {
+        note.textContent = "🎉 Thank you, " + name + "! Our team will contact you shortly.";
+        note.className = "form-note ok";
+      }
+      form.reset();
+      setTimeout(function () { if (note) { note.textContent = ""; note.className = "form-note"; } }, 6000);
+    });
+  }
+
+  /* ============ GALLERY (simple lightbox) ============ */
+  document.querySelectorAll(".gal-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      var label = item.querySelector("span");
+      var text = label ? label.textContent : "Image";
+      var overlay = document.createElement("div");
+      overlay.style.cssText = "position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.9);display:grid;place-items:center;cursor:zoom-out;padding:20px;animation:fadeUp .3s ease";
+      var box = document.createElement("div");
+      box.style.cssText = "width:min(680px,90%);height:min(440px,70vh);border-radius:20px;background:linear-gradient(135deg,#2563eb,#0891b2);display:grid;place-items:center;color:#fff;font-family:'Poppins';font-weight:600;font-size:22px;box-shadow:0 30px 80px rgba(0,0,0,.5)";
+      box.textContent = text;
+      overlay.appendChild(box);
+      overlay.addEventListener("click", function () { overlay.remove(); });
+      document.body.appendChild(overlay);
+    });
+  });
+
+  /* ============ CURRENT YEAR ============ */
+  var yearEls = document.querySelectorAll("[data-year]");
+  yearEls.forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+})();
+
+</script>
+</body>
+</html>
